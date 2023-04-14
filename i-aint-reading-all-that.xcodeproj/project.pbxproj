@@ -14,6 +14,9 @@
 		25DA966029E895D7003462D9 /* i_aint_reading_all_thatTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25DA965F29E895D7003462D9 /* i_aint_reading_all_thatTests.swift */; };
 		25DA966A29E895D7003462D9 /* i_aint_reading_all_thatUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25DA966929E895D7003462D9 /* i_aint_reading_all_thatUITests.swift */; };
 		25DA966C29E895D7003462D9 /* i_aint_reading_all_thatUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25DA966B29E895D7003462D9 /* i_aint_reading_all_thatUITestsLaunchTests.swift */; };
+		25DA967929E89636003462D9 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25DA967829E89635003462D9 /* APIManager.swift */; };
+		25DA967C29E89756003462D9 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 25DA967B29E89756003462D9 /* Alamofire */; };
+		25DA967F29E897C5003462D9 /* KeychainSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 25DA967E29E897C5003462D9 /* KeychainSwift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +47,7 @@
 		25DA966529E895D7003462D9 /* i-aint-reading-all-thatUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "i-aint-reading-all-thatUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		25DA966929E895D7003462D9 /* i_aint_reading_all_thatUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = i_aint_reading_all_thatUITests.swift; sourceTree = "<group>"; };
 		25DA966B29E895D7003462D9 /* i_aint_reading_all_thatUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = i_aint_reading_all_thatUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		25DA967829E89635003462D9 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +55,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				25DA967F29E897C5003462D9 /* KeychainSwift in Frameworks */,
+				25DA967C29E89756003462D9 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -98,6 +104,7 @@
 				25DA965029E895D5003462D9 /* ContentView.swift */,
 				25DA965229E895D6003462D9 /* Assets.xcassets */,
 				25DA965429E895D6003462D9 /* Preview Content */,
+				25DA967829E89635003462D9 /* APIManager.swift */,
 			);
 			path = "i-aint-reading-all-that";
 			sourceTree = "<group>";
@@ -143,6 +150,10 @@
 			dependencies = (
 			);
 			name = "i-aint-reading-all-that";
+			packageProductDependencies = (
+				25DA967B29E89756003462D9 /* Alamofire */,
+				25DA967E29E897C5003462D9 /* KeychainSwift */,
+			);
 			productName = "i-aint-reading-all-that";
 			productReference = 25DA964B29E895D5003462D9 /* i-aint-reading-all-that.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +226,10 @@
 				Base,
 			);
 			mainGroup = 25DA964229E895D5003462D9;
+			packageReferences = (
+				25DA967A29E89756003462D9 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				25DA967D29E897C5003462D9 /* XCRemoteSwiftPackageReference "keychain-swift" */,
+			);
 			productRefGroup = 25DA964C29E895D5003462D9 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -257,6 +272,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				25DA967929E89636003462D9 /* APIManager.swift in Sources */,
 				25DA965129E895D5003462D9 /* ContentView.swift in Sources */,
 				25DA964F29E895D5003462D9 /* i_aint_reading_all_thatApp.swift in Sources */,
 			);
@@ -420,11 +436,13 @@
 				DEVELOPMENT_TEAM = MN8C3856QD;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "mic pls";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -449,11 +467,13 @@
 				DEVELOPMENT_TEAM = MN8C3856QD;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "mic pls";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -583,6 +603,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		25DA967A29E89756003462D9 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		25DA967D29E897C5003462D9 /* XCRemoteSwiftPackageReference "keychain-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/evgenyneu/keychain-swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 20.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		25DA967B29E89756003462D9 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 25DA967A29E89756003462D9 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		25DA967E29E897C5003462D9 /* KeychainSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 25DA967D29E897C5003462D9 /* XCRemoteSwiftPackageReference "keychain-swift" */;
+			productName = KeychainSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 25DA964329E895D5003462D9 /* Project object */;
 }
