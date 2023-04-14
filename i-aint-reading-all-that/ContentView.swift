@@ -8,6 +8,7 @@ struct ContentView: View {
     @State private var bulletPoints: String = ""
     @State private var apiKey: String = ""
     @State private var isApiKeyVisible = false
+    @State private var isLoading = false
 
     private let keychain = KeychainSwift()
 
@@ -79,6 +80,10 @@ struct ContentView: View {
                     .clipShape(Capsule())
             }
             .padding()
+            if isLoading {
+                            ActivityIndicator(style: .large)
+                        }
+            
         }
     }
     
@@ -100,24 +105,29 @@ struct ContentView: View {
             }
         }
 
-        func stopRecording() {
+    func stopRecording() {
             audioRecorder.stop()
+            isLoading = true
 
             APIManager.shared.transcribeAudio(fileURL: audioRecorder.url) { result in
                 switch result {
                 case .success(let transcription):
                     APIManager.shared.summarizeToBulletPoints(text: transcription) { result in
-                        switch result {
-                        case .success(let summary):
-                            DispatchQueue.main.async {
+                        DispatchQueue.main.async {
+                            isLoading = false
+                            switch result {
+                            case .success(let summary):
                                 bulletPoints = summary
+                            case .failure(let error):
+                                print("Error summarizing text: \(error)")
                             }
-                        case .failure(let error):
-                            print("Error summarizing text: \(error)")
                         }
                     }
                 case .failure(let error):
-                    print("Error transcribing audio: \(error)")
+                    DispatchQueue.main.async {
+                        isLoading = false
+                        print("Error transcribing audio: \(error)")
+                    }
                 }
             }
         }

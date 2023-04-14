@@ -17,6 +17,7 @@
 		25DA967929E89636003462D9 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25DA967829E89635003462D9 /* APIManager.swift */; };
 		25DA967C29E89756003462D9 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 25DA967B29E89756003462D9 /* Alamofire */; };
 		25DA967F29E897C5003462D9 /* KeychainSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 25DA967E29E897C5003462D9 /* KeychainSwift */; };
+		25DA968329E8F5D6003462D9 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25DA968229E8F5D6003462D9 /* ActivityIndicator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,7 @@
 		25DA966929E895D7003462D9 /* i_aint_reading_all_thatUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = i_aint_reading_all_thatUITests.swift; sourceTree = "<group>"; };
 		25DA966B29E895D7003462D9 /* i_aint_reading_all_thatUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = i_aint_reading_all_thatUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		25DA967829E89635003462D9 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		25DA968229E8F5D6003462D9 /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +107,7 @@
 				25DA965229E895D6003462D9 /* Assets.xcassets */,
 				25DA965429E895D6003462D9 /* Preview Content */,
 				25DA967829E89635003462D9 /* APIManager.swift */,
+				25DA968229E8F5D6003462D9 /* ActivityIndicator.swift */,
 			);
 			path = "i-aint-reading-all-that";
 			sourceTree = "<group>";
@@ -272,6 +275,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				25DA968329E8F5D6003462D9 /* ActivityIndicator.swift in Sources */,
 				25DA967929E89636003462D9 /* APIManager.swift in Sources */,
 				25DA965129E895D5003462D9 /* ContentView.swift in Sources */,
 				25DA964F29E895D5003462D9 /* i_aint_reading_all_thatApp.swift in Sources */,

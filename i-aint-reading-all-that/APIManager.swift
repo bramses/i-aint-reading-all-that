@@ -80,6 +80,6 @@ class APIManager {
     }
 
     func summarizeToBulletPoints(text: String, completion: @escaping (Result<String, Error>) -> Void) {
-        chatAPI(prompt: "Summarize this text into bullet points: \(text)", completion: completion)
+        chatAPI(prompt: "Summarize this text into bullet points. Retain first person voice: \(text)", completion: completion)
     }
 }
