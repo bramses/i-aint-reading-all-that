@@ -6,7 +6,7 @@ struct ContentView: View {
     @State private var isRecording = false
     @State private var audioRecorder: AVAudioRecorder!
     @State private var bulletPoints: String = ""
-    @State private var apiKey: String = ""
+    @State private var apiKey: String = APIManager.shared.apiKey
     @State private var isApiKeyVisible = false
     @State private var isLoading = false
 
@@ -37,7 +37,7 @@ struct ContentView: View {
                 .padding()
 
                 Button(action: {
-                    keychain.set(apiKey, forKey: "openai_api_key")
+                    APIManager.shared.apiKey = apiKey
                 }) {
                     Text("Save API Key")
                         .padding()

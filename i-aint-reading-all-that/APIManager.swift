@@ -13,14 +13,14 @@ class APIManager {
     static let shared = APIManager()
     private let openAIURL = "https://api.openai.com/v1"
     private let keychain = KeychainSwift()
-    private var apiKey: String {
-        get {
-            return keychain.get("openai_api_key") ?? ""
+    var apiKey: String {
+            get {
+                return keychain.get("openai_api_key") ?? ""
+            }
+            set {
+                keychain.set(newValue, forKey: "openai_api_key")
+            }
         }
-        set {
-            keychain.set(newValue, forKey: "openai_api_key")
-        }
-    }
 
     private init() {}
 
